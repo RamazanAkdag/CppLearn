@@ -1,0 +1,8 @@
+derlecalistir : program
+
+program: main.o kutuphane.o
+	g++ -I "./include" -c ./src/kutuphane.cpp -o ./lib/kutuphane.o
+main.o: 
+	g++ -I "./include" -c ./src/main.cpp -o ./lib/main.o
+calistir:
+	./bin/program.exe
